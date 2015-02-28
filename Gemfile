@@ -13,6 +13,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'unicorn'
 gem 'rails_12factor'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+gem 'bootstrap_form', '~> 2.2.0'
 
 
 group :development, :test do
@@ -24,6 +28,7 @@ group :development, :test do
 
   gem 'spring'
   gem 'capybara'
+  gem 'rspec-rails'
   gem 'mocha'
   gem 'launchy'
 end
