@@ -63,11 +63,19 @@ body {
   margin-right: 30%;
   font-size: 20px;
   margin-top: 20px;
+  outline: none !important;
 }
 
 .generate-playlist:hover {
   background-color: #608a00;
   border-color: #608a00;
+  outline: none;
+}
+
+.generate-playlist:focus {
+  background-color: #84bd00;
+  border-color: #84bd00;
+  outline: none;
 }
 
 /* spotify */
