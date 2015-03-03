@@ -3,6 +3,16 @@
  *= require_self
  */
 
+ /* fonts */
+ @font-face {
+    font-family: 'Emblema-Fill1Deco';
+    src: url('/assets/Corradine Fonts - Emblema-Fill1Deco-webfont.eot');
+    src: url('/assets/Corradine Fonts - Emblema-Fill1Deco-webfont.eot') format('eot'),
+         url('/assets/Corradine Fonts - Emblema-Fill1Deco-webfont.woff') format('woff'),
+         url('/assets/Corradine Fonts - Emblema-Fill1Deco-webfont.ttf') format('truetype'),
+         url('/assets/Corradine Fonts - Emblema-Fill1Deco-webfont.svg') format('svg');
+}
+
  /* full site */
 
 body {
