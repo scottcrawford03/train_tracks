@@ -17,7 +17,8 @@ gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form', '~> 2.2.0'
-
+gem 'omniauth-spotify'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
@@ -25,7 +26,8 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'factory_girl_rails', "~> 4.0"
   gem 'web-console', '~> 2.0'
-
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'spring'
   gem 'capybara'
   gem 'rspec-rails'

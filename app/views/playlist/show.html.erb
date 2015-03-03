@@ -1,0 +1,40 @@
+<%= render partial: "shared/log_in" %>
+<div class="logo-playlist-page">
+  <%=link_to(image_tag("TrainTracksLogo2.png", height: "30%", width: "30%"), root_path) %>
+</div>
+<div class="playlist-table">
+  <h4 class='playlist-title'> New Playlist </h4>
+  <table class='table table-bordered playlist-table-tracks'>
+    <thead>
+      <tr class="playlist-headers">
+        <th data-field='Order Number'> Song ID </th>
+        <th data-field='Total Cost'>Title</th>
+        <th data-field='Order Status'>Artist</th>
+        <th data-field='time'>BPM</th>
+        <th data-field='update'>Length</th>
+      </tr>
+    </thead>
+    <tr class="playlist-rows">
+      <td>1</td>
+      <td>Call Me Maybe</td>
+      <td>Carly Rae Jepsen</td>
+      <td>134</td>
+      <td>3:34</td>
+    </tr>
+    <tr class="playlist-rows">
+      <td>2</td>
+      <td>Baby</td>
+      <td>Justin Bieber</td>
+      <td>112</td>
+      <td>3:34</td>
+    </tr>
+    <tr class="playlist-rows">
+      <td>3</td>
+      <td>Shake It Off</td>
+      <td>Taylor Swift</td>
+      <td>9000</td>
+      <td>3:37</td>
+    </tr>
+  </table>
+  </div>
+</div>
