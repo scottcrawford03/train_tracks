@@ -12,6 +12,15 @@ body {
   background-position: 0px 0px;
 }
 
+.logged-in {
+  width: 100%;
+  float: right;
+  padding-right: 40px;
+  padding-top: 20px;
+  font-size: 15px;
+  padding-left: 80%;
+}
+
 /* logo */
 .train-tracks-logo {
   padding-top: 100px;
@@ -102,6 +111,33 @@ body {
 }
 
 .login-spotify:visited{
+  background-color: #84bd00;
+}
+
+.logout-spotify {
+  float: right;
+  background-color: #84bd00;
+  border-color: #84bd00;
+  border-radius: 500px;
+  margin-right: 95px;
+  margin-top: 15px;
+  text-align: center;
+  text-transform: capitalize;
+  outline: none !important;
+}
+
+.logout-spotify:hover{
+  background-color: #608a00;
+  outline: none;
+}
+
+.logout-spotify:focus{
+  background-color: #84bd00;
+  outline: none;
+}
+
+
+.logout-spotify:visited{
   background-color: #84bd00;
 }
 
