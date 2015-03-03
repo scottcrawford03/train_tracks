@@ -5,17 +5,36 @@
 
  /* fonts */
  @font-face {
-    font-family: 'Emblema-Fill1Deco';
-    src: font-url('Emblema-Fill1Deco-webfont.eot');
-    font-weight: normal;
-    font-style: normal;
-}
+     font-family: 'emblema_fill1_deco';
+     src: url('Emblema-Fill1Deco-webfont.eot');
+     src: url('Emblema-Fill1Deco-webfont.eot?#iefix') format('embedded-opentype'),
+          url('Emblema-Fill1Deco-webfont.woff2') format('woff2'),
+          url('Emblema-Fill1Deco-webfont.woff') format('woff'),
+          url('Emblema-Fill1Deco-webfont.ttf') format('truetype'),
+          url('Emblema-Fill1Deco-webfont.svg#emblema_fill1_deco') format('svg');
+     font-weight: normal;
+     font-style: normal;
+
+ }
+
+ @font-face {
+     font-family: 'emblema_headline2_deco';
+     src: url('Emblema-Headline2Deco-webfont.eot');
+     src: url('Emblema-Headline2Deco-webfont.eot?#iefix') format('embedded-opentype'),
+          url('Emblema-Headline2Deco-webfont.woff2') format('woff2'),
+          url('Emblema-Headline2Deco-webfont.woff') format('woff'),
+          url('Emblema-Headline2Deco-webfont.ttf') format('truetype'),
+          url('Emblema-Headline2Deco-webfont.svg#emblema_headline2_deco') format('svg');
+     font-weight: normal;
+     font-style: normal;
+
+ }
 
  /* full site */
 
 body {
   background: image-url("runner.jpg") no-repeat center center fixed;
-  font-family: 'Emblema-Fill1Deco';
+  font-family: 'emblema_fill1_deco';
   background-size: cover;
   background-position: 0px 0px;
 }
@@ -61,7 +80,7 @@ body {
   font-size: 40px;
   text-align: center;
   display: inline-block;
-  font-family: 'Emblema-Headline2Deco';
+  font-family: 'emblema_headline2_deco';
 }
 
 #playlist_intensity {
@@ -153,7 +172,7 @@ body {
 .playlist-title {
   text-align: center;
   font-size: 60px;
-  font-family: 'Emblema-Headline2Deco';
+  font-family: 'emblema_headline2_deco';
 }
 .playlist-table {
   padding-top: 75px;
