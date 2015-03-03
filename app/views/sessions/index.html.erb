@@ -1,5 +1,10 @@
-<div class="header">
-  <div class="train-tracks-logo">
-    <%= image_tag("TrainTracksLogo2.png", height: "50%", width: "50%") %>
-  </div>
+<div class="train-tracks-logo">
+  <%= image_tag("TrainTracksLogo2.png", height: "55%", width: "55%") %>
+</div>
+<div class="playlist-form">
+  <%= bootstrap_form_for :playlist, url: playlist_index_path do |f| %>
+    <%= f.select :intensity, ['LOW', 'MEDIUM', 'HIGH'] %>
+    <%= f.text_field :time, label: "Time", placeholder: "(MINUTES)"%>
+    <%= f.submit "Generate Playlist", class: "btn btn-success generate-playlist" %>
+  <% end %>
 </div>

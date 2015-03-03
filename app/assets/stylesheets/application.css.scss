@@ -15,7 +15,59 @@ body {
 /* logo */
 .train-tracks-logo {
   padding-top: 100px;
-  padding-left: 100px;
+  padding-left: 70px;
+}
+
+.logo-playlist-page {
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+/* playlist form */
+.playlist-form {
+  margin-left: 15%;
+  width: 75%;
+  margin-top: 5%;
+}
+
+.form-group {
+  margin-left: 10px;
+  width: 20%;
+  font-size: 40px;
+  text-align: center;
+  display: inline-block;
+}
+
+.form-group {
+  margin-left: 10px;
+  width: 20%;
+  font-size: 40px;
+  text-align: center;
+  display: inline-block;
+  font-family: 'Emblema-Headline2Deco';
+}
+
+#playlist_intensity {
+  text-align: center;
+}
+
+#playlist_time {
+  text-align: center;
+}
+
+.generate-playlist {
+  background-color: #84bd00;
+  border-color: #84bd00;
+  border-radius: 500px;
+  width: 44%;
+  margin-right: 30%;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.generate-playlist:hover {
+  background-color: #608a00;
+  border-color: #608a00;
 }
 
 /* spotify */
@@ -42,5 +94,45 @@ body {
 }
 
 .login-spotify:visited{
-  background-color: hotpink;
+  background-color: #84bd00;
+}
+
+/* playlist table */
+.playlist-title {
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Emblema-Headline2Deco';
+}
+.playlist-table {
+  padding-top: 75px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.playlist-headers {
+  background-color: black;
+  color: #84bd00;
+}
+
+.playlist-rows {
+  background-color: gray;
+  color: white;
+}
+
+.playlist-rows:hover{
+  background-color: #84bd00;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:40px;
+}
+
+.footer p {
+  line-height: 10px;
 }
