@@ -48,6 +48,13 @@ body {
   padding-left: 80%;
 }
 
+#errors {
+  text-align:center;
+  font-size: 30px;
+  background-color: gray;
+  color: white;
+}
+
 /* logo */
 .train-tracks-logo {
   padding-top: 100px;
@@ -171,8 +178,9 @@ body {
 /* playlist table */
 
 .playlist-title {
+  margin-left: 165px;
+  margin-top: 100px;
   margin-bottom: 25px;
-  text-align: center;
   font-size: 60px;
   font-family: 'emblema_headline2_deco';
 }
@@ -183,7 +191,7 @@ body {
   margin-right: auto;
 }
 
-.playlist-row:hover {
+.row:hover {
   border-radius: 10px;
   background-color: #84bd00;
 }
@@ -191,8 +199,8 @@ body {
 .playlist-songs {
   font-family: 'emblema_headline2_deco';
   font-size: 20px;
-  padding-left: 50px;
-  padding-top: 10px;
+  padding-top: 17px;
+  margin-right: 25px;
 }
 
 .playlist-song-title {
@@ -205,15 +213,23 @@ body {
   padding-bottom: 20px;
   text-align: center;
   font-size: 35px;
-  margin-left: 250px;
+  margin-right: 40px;
+  width: 30%;
+}
+
+.playlist-length {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 35px;
   margin-right: auto;
   width: 30%;
+  color: white;
 }
 
 /* footer */
 .footer {
   text-align: center;
-  position:absolute;
   bottom:0;
   width:100%;
   height:40px;

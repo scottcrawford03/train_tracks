@@ -7,6 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="errors">
+    <% flash.each do |name, message| %>
+      <p><%= (message).html_safe %></p>
+    </div>
+    <% end %>
+  </div>
   <%= yield %>
   <%= render partial: "shared/footer" %>
 </body>
