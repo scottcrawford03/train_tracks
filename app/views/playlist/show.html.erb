@@ -3,28 +3,24 @@
 <div class="logo-playlist-page">
   <%=link_to(image_tag("TrainTracksLogo2.png", height: "30%", width: "30%"), root_path) %>
 </div>
-<h4 class='playlist-title'> New Playlist </h4>
+<h4 class='playlist-title'> <%="#{@playlist.intensity.downcase} intensity playlist for #{@playlist.length} minutes"%></h4>
+<% @playlist.tracks.each do |track| %>
 <div class="playlist-table">
-  <div class="playlist-row">
-    <div class="col-lg-4 playlist-songs">
-      <p>Taylor Swift</p>
-      <p><span class="playlist-song-title">Shake it Off</span></p>
+  <div class="row">
+    <div class="col-lg-2 song-album">
+      <%= image_tag('tswift-album.png', height: '100px', width: '100px') %>
     </div>
-    <div class="playlist-bpm">
-      100 bpm
+    <div class="col-lg-2 playlist-songs">
+      <p> <%= track.spotify_artist_name %></p>
+      <p><span class="playlist-song-title"> <%= track.spotify_track_name %></span></p>
+    </div>
+    <div class="col-lg-1 playlist-bpm">
+      <%= "#{track.avg_bpm} BPM"%>
+    </div>
+    <div class="col-lg-1 playlist-length">
+      <%= (Time.at(track.length).utc.strftime('%_M:%S')) %>
     </div>
   </div>
     <hr>
 </div>
-<div class="playlist-table">
-  <div class="playlist-row">
-    <div class="col-lg-4 playlist-songs">
-      <p>Taylor Swift</p>
-      <p><span class="playlist-song-title">Shake it Off</span></p>
-    </div>
-    <div class="playlist-bpm">
-      100 bpm
-    </div>
-  </div>
-    <hr>
-</div>
+<% end %>
