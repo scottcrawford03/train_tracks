@@ -69,7 +69,6 @@ body {
 }
 
 .logo-playlist-page {
-  display: inline;
   padding-top: 25px;
   padding-left: 25px;
 }
@@ -187,9 +186,9 @@ body {
 
 .playlist-title {
   margin-left: 165px;
-  margin-top: 100px;
-  margin-bottom: 25px;
-  font-size: 60px;
+  margin-top: 70px;
+  margin-bottom: 40px;
+  font-size: 50px;
   font-family: 'emblema_headline2_deco';
 }
 .playlist-table {
@@ -206,30 +205,28 @@ body {
 
 .playlist-songs {
   font-family: 'emblema_headline2_deco';
-  font-size: 20px;
-  padding-top: 17px;
+  font-size: 15px;
+  padding-top: 14px;
   margin-right: 25px;
 }
 
 .playlist-song-title {
   font-family: 'emblema_fill1_deco';
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .playlist-bpm {
   padding-top: 20px;
-  padding-bottom: 20px;
   text-align: center;
-  font-size: 35px;
+  font-size: 25px;
   margin-right: 40px;
   width: 30%;
 }
 
 .playlist-length {
   padding-top: 20px;
-  padding-bottom: 20px;
   text-align: center;
-  font-size: 35px;
+  font-size: 25px;
   margin-right: auto;
   width: 30%;
   color: white;

@@ -1,7 +1,7 @@
 class Playlist < ActiveRecord::Base
-  has_and_belongs_to_many :tracks
+  has_and_belongs_to_many :tracks, uniq: true
 
-  validates :length, presence: true, :numericality => {:greater_than => 0, :only_integer => true}
+  validates :length, presence: true, :numericality => {:greater_than => 0, :less_than => 61, :only_integer => true}
   validates :intensity, presence: true
 
   def playlist_length
@@ -10,7 +10,8 @@ class Playlist < ActiveRecord::Base
 
   def create_mix(sorted_tracks, time)
     while playlist_length < (time.to_i * 60) do
-    tracks << sorted_tracks.shuffle.pop
+      track = sorted_tracks.to_a.shuffle.pop
+      tracks << track unless tracks.exists?(track)
     end
   end
 end
