@@ -41,13 +41,11 @@ body {
 
 .logged-in {
   font-family: 'emblema_headline2_deco';
-  width: 100%;
-  display: inline-block;
+  width: 250px;
   float: right;
   padding-right: 40px;
   padding-top: 20px;
   font-size: 15px;
-  padding-left: 80%;
 }
 
 #user-name {
@@ -156,12 +154,11 @@ body {
 }
 
 .logout-spotify {
-  float: right;
   background-color: #84bd00;
   border-color: #84bd00;
   border-radius: 500px;
-  margin-right: 80px;
-  margin-top: 0px;
+  margin-left: 95px;
+  margin-bottom: 10px;
   text-align: center;
   text-transform: capitalize;
   outline: none !important;
