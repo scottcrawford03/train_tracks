@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'sessions#index'
   delete '/logout', to: 'sessions#destroy'
   resources :playlist
+  get '/:user/dashboard', to: 'user#show', as: 'user'
 end

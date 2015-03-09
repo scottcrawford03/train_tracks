@@ -1,5 +1,5 @@
 <div class="logged-in">
-  <%= image_tag current_user.image_url, class: "img-circle", width: '25%', height: '25%' if current_user %>
+  <%= link_to(image_tag(current_user.image_url, class: "img-circle", width: '25%', height: '25%'), user_path(current_user.id)) if current_user %>
   <span id="user-name"><%= "#{current_user.name}" %></span>
 <%= link_to "LOGOUT", logout_path, method: :delete, class: 'btn btn-default btn-md logout-spotify' %>
 </div>
