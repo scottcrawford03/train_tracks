@@ -3,12 +3,14 @@ class SessionsController < ApplicationController
   end
 
   def create
+    session[:return_to] = request.referer
     user = User.find_or_create_from_auth(auth)
     if user
       session[:user_id] = user.id
-      redirect_to root_path
+      redirect_to session[:return_to]
     else
-      redirect_to root_path
+      flash[:errors] = "Unable to Login to Spotify."
+      redirect_to session[:return_to]
     end
   end
 
