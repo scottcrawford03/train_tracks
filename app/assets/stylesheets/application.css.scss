@@ -229,6 +229,59 @@ body {
   color: white;
 }
 
+/* dashboard */
+.dashboard-user {
+  padding-top: 75px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  text-align: center;
+}
+
+.dashboard-user p{
+  font-size: 30px;
+  text-align: center;
+}
+
+.dashboard-logout {
+  float: right;
+  margin-right: 50px;
+}
+
+.logo-dashboard-page {
+  margin-left: 50px;
+  width: 600px;
+  float: left;
+}
+
+.dashboard-options {
+}
+
+.dashboard-new-playlist {
+  float: left;
+  background-color: #84bd00;
+  margin-right: 100px;
+  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.dashboard-old-playlists {
+  float: left;
+  margin-right: 100px;
+  background-color: #84bd00;
+  width: 100px;
+  height: 100px;
+}
+
+.dashboard-random-playlist {
+  float: left;
+  background-color: #84bd00;
+  width: 100px;
+  height: 100px;
+}
+
 /* footer */
 .footer {
   text-align: center;
