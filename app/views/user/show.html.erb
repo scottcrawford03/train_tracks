@@ -9,15 +9,23 @@
     <%= image_tag current_user.image_url, height: "40%", width: "40%", class: "img-circle" if current_user %>
   </div>
   <p><%= "#{current_user.name}" %> </p>
+  <hr>
 </div>
+
 <div class="dashboard-options">
-  <div class="dashboard-new-playlist">
-    hello
-  </div>
-  <div class="dashboard-old-playlists">
-    hi
-  </div>
-  <div class="dashboard-random-playlist">
-    how ya dern
-  </div>
+  <a style="display:block" href= <%= "#{root_path}" %> >
+    <div class="dashboard-new-playlist">
+      <p id="new-playlist">Generate New Playlist</p>
+    </div>
+  </a>
+  <a style="display:block" href= <%= "#{user_playlists_path(current_user)}" %> >
+    <div class="dashboard-old-playlists">
+      <p id="previous-playlists">Previous Playlists</p>
+    </div>
+  </a>
+  <a style="display:block" href= <%= "#{random_playlist_path}" %> >
+    <div class="dashboard-random-playlist">
+      <p id="random-playlist">Random Playlist</p>
+    </div>
+  </a>
 </div>

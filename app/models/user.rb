@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   validates :uid, presence: true
   validates :name, presence: true
   validates :token, presence: true
+  has_many :playlists
 
   def self.find_or_create_from_auth(auth)
     user = User.find_or_create_by(provider: auth.provider, uid: auth.uid)
