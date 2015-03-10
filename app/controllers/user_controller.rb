@@ -9,7 +9,10 @@ class UserController < ApplicationController
   end
 
   def playlists
-    if current_user
+    if current_user.playlists.empty?
+      redirect_to root_path
+      flash[:error] = "You don't have any playlists!"
+    elsif current_user
       @user = current_user
     else
       redirect_to root_path

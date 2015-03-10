@@ -7,8 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_or_create_from_auth(auth)
     if user
       session[:user_id] = user.id
-      redirect_to session[:return_to] unless session[:return_to].nil?
-      redirect_to root_url if session[:return_to].nil?
+      redirect_to playlist_path(Playlist.last)
     else
       flash[:errors] = "Unable to Login to Spotify."
       redirect_to session[:return_to]

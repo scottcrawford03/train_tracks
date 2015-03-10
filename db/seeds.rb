@@ -23,6 +23,10 @@ Track.create(spotify_artist_name: "KidsBop", spotify_track_name: "9", avg_bpm: "
 Track.create(spotify_artist_name: "KidsBop", spotify_track_name: "10", avg_bpm: "156", length: 300)
 Track.create(spotify_artist_name: "KidsBop", spotify_track_name: "11", avg_bpm: "156", length: 300)
 Track.create(spotify_artist_name: "KidsBop", spotify_track_name: "12", avg_bpm: "156", length: 500)
+Track.create(spotify_artist_name: "KidsBop", spotify_track_name: "13", avg_bpm: "156", length: 500)
+Track.create(spotify_artist_name: "KidsBop", spotify_track_name: "14", avg_bpm: "156", length: 500)
+Track.create(spotify_artist_name: "KidsBop", spotify_track_name: "15", avg_bpm: "156", length: 500)
+Track.create(spotify_artist_name: "KidsBop", spotify_track_name: "16", avg_bpm: "156", length: 500)
 
 Track.create(spotify_artist_name: "Justin Bieber", spotify_track_name: "Baby", avg_bpm: "127", length: 200)
 Track.create(spotify_artist_name: "ABBA", spotify_track_name: "Dancing Queen", avg_bpm: "123", length: 220)
@@ -41,6 +45,10 @@ Track.create(spotify_artist_name: "Cozy Chirs", spotify_track_name: "9", avg_bpm
 Track.create(spotify_artist_name: "Cozy Chirs", spotify_track_name: "10", avg_bpm: "122", length: 300)
 Track.create(spotify_artist_name: "Cozy Chirs", spotify_track_name: "11", avg_bpm: "122", length: 300)
 Track.create(spotify_artist_name: "Cozy Chirs", spotify_track_name: "12", avg_bpm: "122", length: 500)
+Track.create(spotify_artist_name: "Cozy Chirs", spotify_track_name: "13", avg_bpm: "122", length: 500)
+Track.create(spotify_artist_name: "Cozy Chirs", spotify_track_name: "14", avg_bpm: "122", length: 500)
+Track.create(spotify_artist_name: "Cozy Chirs", spotify_track_name: "15", avg_bpm: "122", length: 500)
+Track.create(spotify_artist_name: "Cozy Chirs", spotify_track_name: "16", avg_bpm: "122", length: 500)
 
 
 Track.create(spotify_artist_name: "Miley Cyrus", spotify_track_name: "The Climb", avg_bpm: "90", length: 200)
@@ -59,3 +67,7 @@ Track.create(spotify_artist_name: "Yolo Body Bop", spotify_track_name: "9", avg_
 Track.create(spotify_artist_name: "Yolo Body Bop", spotify_track_name: "10", avg_bpm: "74", length: 300)
 Track.create(spotify_artist_name: "Yolo Body Bop", spotify_track_name: "11", avg_bpm: "74", length: 300)
 Track.create(spotify_artist_name: "Yolo Body Bop", spotify_track_name: "12", avg_bpm: "74", length: 500)
+Track.create(spotify_artist_name: "Yolo Body Bop", spotify_track_name: "13", avg_bpm: "74", length: 500)
+Track.create(spotify_artist_name: "Yolo Body Bop", spotify_track_name: "14", avg_bpm: "74", length: 500)
+Track.create(spotify_artist_name: "Yolo Body Bop", spotify_track_name: "15", avg_bpm: "74", length: 500)
+Track.create(spotify_artist_name: "Yolo Body Bop", spotify_track_name: "16", avg_bpm: "74", length: 500)
