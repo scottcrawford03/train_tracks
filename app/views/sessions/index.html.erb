@@ -2,7 +2,7 @@
 <div class="train-tracks-logo">
   <%= image_tag("TrainTracksLogo2.png", height: "55%", width: "55%") %>
 </div>
-
+<h2 class='index-tagline'>A Soundtrack For Your Workout</h2>
 <div class="playlist-form">
   <%= bootstrap_form_for :playlist, url: playlist_index_path do |f| %>
     <%= f.select :intensity, ['LOW', 'MEDIUM', 'HIGH'] %>

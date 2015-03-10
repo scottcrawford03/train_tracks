@@ -42,18 +42,22 @@ body {
 }
 
 a{
+  text-decoration: none;
   color: black;
 }
 
 a:active{
+  text-decoration: none;
   color: black;
 }
 
 a:hover{
+  text-decoration: none;
   color: black;
 }
 
 a:visited{
+  text-decoration: none;
   color: black;
 }
 
@@ -86,6 +90,12 @@ a:visited{
 .train-tracks-logo {
   padding-top: 100px;
   padding-left: 70px;
+}
+
+.index-tagline{
+  line-height: 20px;
+  margin-left: 14%;
+  margin-bottom: 20px;
 }
 
 .logo-playlist-page {
@@ -123,6 +133,10 @@ a:visited{
 
 #playlist_length {
   text-align: center;
+}
+
+#playlist_length a{
+  color:white;
 }
 
 .generate-playlist {
