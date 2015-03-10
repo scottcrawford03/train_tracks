@@ -16,14 +16,16 @@ class PlaylistController < ApplicationController
   end
 
   def update
-    if current_user
       playlist = Playlist.find(params[:id])
+    if current_user.nil?
+      flash[:error] = "Please Login To Save a Playlist"
+    else
       playlist.user_id = current_user.id
       playlist.name = "#{current_user.name}'s #{playlist.intensity} Intensity Playlist"
       playlist.save
-    end
       flash[:success] = "Playlist Saved Successfully"
-      redirect_to playlist_path(playlist)
+    end
+    redirect_to playlist_path(playlist)
   end
 
   def random

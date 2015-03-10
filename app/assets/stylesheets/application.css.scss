@@ -213,6 +213,16 @@ a:visited{
   margin-right: 18%;
 }
 
+.save-playlist:hover{
+  background-color: #608a00;
+  outline: none;
+}
+
+.save-playlist:focus{
+  background-color: #84bd00;
+  outline: none;
+}
+
 /* playlist table */
 
 .playlist-title {
