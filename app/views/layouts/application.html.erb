@@ -2,18 +2,21 @@
 <html>
 <head>
   <title>TrainTracks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div id="errors">
+    <div id="errors" class="flash-errors">
       <% flash.each do |name, message| %>
         <p><%= (message).html_safe %></p>
       </div>
       <% end %>
     </div>
-    <%= yield %>
-    <%= render partial: "shared/footer" %>
+    <div class="main-body">
+      <%= yield %>
+    </div>
+  <%= render partial: "shared/footer" %>
 </body>
 </html>

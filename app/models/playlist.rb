@@ -1,5 +1,6 @@
 class Playlist < ActiveRecord::Base
   has_and_belongs_to_many :tracks, uniq: true
+  belongs_to :user
 
   validates :length, presence: true, :numericality => {:greater_than => 0, :less_than => 61, :only_integer => true}
   validates :intensity, presence: true

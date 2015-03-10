@@ -3,27 +3,22 @@
 <div class="logo-playlist-page">
   <%=link_to(image_tag("TrainTracksLogo2.png", height: "20%", width: "20%"), root_path) %>
 </div>
+<h4 class='playlist-title'> <%="#{@user.name}'s Playlists"%></h4>
 <div style="clear:both;"></div>
-<div class="playlist-topping">
-  <h4 class='playlist-title'> <%="#{@playlist.intensity.downcase} intensity playlist"%></h4>
-  <%= link_to "Save Playlist", playlist_path(@playlist), method: :put, class: 'btn btn-default btn-lg save-playlist' if current_user && @playlist.user_id.nil? %>
-</div>
-<div style="clear:both;"></div>
-<% @playlist.tracks.each do |track| %>
+<% @user.playlists.each do |playlist| %>
 <div class="playlist-table">
   <div class="row">
     <div class="col-lg-2 song-album">
       <%= image_tag('tswift-album.png', height: '77px', width: '77px') %>
     </div>
     <div class="col-lg-2 playlist-songs">
-      <p><%= track.spotify_artist_name %></p>
-      <p><span class="playlist-song-title"> <%= track.spotify_track_name %></span></p>
+      <p><%=link_to playlist.name, playlist_path(playlist) %></p>
     </div>
     <div class="col-lg-1 playlist-bpm">
-      <%= "#{track.avg_bpm} BPM"%>
+      <%= playlist.intensity%>
     </div>
     <div class="col-lg-1 playlist-length">
-      <%= (Time.at(track.length).utc.strftime('%_M:%S')) %>
+      <%= playlist.length %>
     </div>
   </div>
     <hr>

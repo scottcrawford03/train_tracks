@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150304191542) do
+ActiveRecord::Schema.define(version: 20150309200113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20150304191542) do
     t.integer  "length"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "playlists_tracks", force: :cascade do |t|
@@ -58,8 +59,9 @@ ActiveRecord::Schema.define(version: 20150304191542) do
     t.string   "token"
     t.string   "uid"
     t.string   "provider"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "playlist_id_id"
   end
 
   add_foreign_key "playlists_tracks", "playlists"
