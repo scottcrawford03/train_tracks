@@ -15,8 +15,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    last_page = request.referer
     session.clear
-    redirect_to root_path
+    redirect_to last_page
   end
 
   private

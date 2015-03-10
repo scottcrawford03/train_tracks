@@ -9,18 +9,19 @@
 <div class="playlist-table">
   <div class="row">
     <div class="col-lg-2 song-album">
-      <%= image_tag('tswift-album.png', height: '77px', width: '77px') %>
+      <%= link_to(image_tag('TTlogo.png', height: '77px', width: '77px'), playlist_path(playlist) ) %>
     </div>
     <div class="col-lg-2 playlist-songs">
       <p><%=link_to playlist.name, playlist_path(playlist) %></p>
     </div>
     <div class="col-lg-1 playlist-bpm">
-      <%= playlist.intensity%>
+      <%=link_to "#{playlist.intensity} BPM", playlist_path(playlist)%>
     </div>
     <div class="col-lg-1 playlist-length">
-      <%= playlist.length %>
+      <%=link_to "#{playlist.length} minutes", playlist_path(playlist) %> &
+      <%=link_to "#{playlist.tracks.count} Tracks", playlist_path(playlist) %>
     </div>
-  </div>
+</div>
     <hr>
 </div>
 <% end %>
