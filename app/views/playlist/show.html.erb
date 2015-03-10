@@ -6,7 +6,7 @@
 <div style="clear:both;"></div>
 <div class="playlist-topping">
   <h4 class='playlist-title'> <%="#{@playlist.intensity.downcase} intensity playlist"%></h4>
-  <%= link_to "Save Playlist", playlist_path(@playlist), method: :put, class: 'btn btn-default btn-lg save-playlist' if current_user %>
+  <%= link_to "Save Playlist", playlist_path(@playlist), method: :put, class: 'btn btn-default btn-lg save-playlist' if current_user && @playlist.user_id.nil? %>
 </div>
 <div style="clear:both;"></div>
 <% @playlist.tracks.each do |track| %>

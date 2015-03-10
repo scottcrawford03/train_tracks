@@ -14,7 +14,9 @@
       </div>
       <% end %>
     </div>
-    <%= yield %>
-    <%= render partial: "shared/footer" %>
+    <div class="main-body">
+      <%= yield %>
+    </div>
+  <%= render partial: "shared/footer" %>
 </body>
 </html>
