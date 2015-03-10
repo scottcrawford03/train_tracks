@@ -59,9 +59,9 @@ ActiveRecord::Schema.define(version: 20150309200113) do
     t.string   "token"
     t.string   "uid"
     t.string   "provider"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.integer  "playlist_id_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "playlist_id"
   end
 
   add_foreign_key "playlists_tracks", "playlists"
