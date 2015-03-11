@@ -247,6 +247,18 @@ a:visited{
   font-size: 50px;
   font-family: 'emblema_headline2_deco';
 }
+
+.form-title{
+  border: none;
+  background-color: transparent;
+}
+
+.form-title:focus {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
 .playlist-table {
   border-radius: 25px;
   width: 75%;

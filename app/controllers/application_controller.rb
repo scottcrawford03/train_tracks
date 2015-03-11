@@ -12,4 +12,11 @@ class ApplicationController < ActionController::Base
   def authorize!
     redirect_to root_path unless current_user
   end
+
+  def check_for_user
+    if current_user.nil?
+      flash[:error] = "Please Login First"
+      redirect_to :back
+    end
+  end
 end

@@ -1,4 +1,6 @@
 class PlaylistController < ApplicationController
+  before_action :check_for_user, only: [:update]
+
   def show
     @playlist = Playlist.find(params[:id])
   end
@@ -16,16 +18,14 @@ class PlaylistController < ApplicationController
   end
 
   def update
-      playlist = Playlist.find(params[:id])
-    if current_user.nil?
-      flash[:error] = "Please Login To Save a Playlist"
+    @playlist = Playlist.find(params[:id])
+    if params[:name].empty?
+      flash[:error] = "Please Name Your Playlist"
     else
-      playlist.user_id = current_user.id
-      playlist.name = "#{current_user.name}'s #{playlist.intensity} Intensity Playlist"
-      playlist.save
+      update_playlist
       flash[:success] = "Playlist Saved Successfully"
     end
-    redirect_to playlist_path(playlist)
+    redirect_to playlist_path(@playlist)
   end
 
   def random
@@ -39,6 +39,13 @@ class PlaylistController < ApplicationController
   end
 
   private
+
+  def update_playlist
+    @playlist.user_id = current_user.id
+    @playlist.name = params[:name]
+    @playlist.save
+  end
+
   def playlist_params
     params.require(:playlist).permit(:intensity, :length)
   end

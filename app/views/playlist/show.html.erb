@@ -5,8 +5,16 @@
 </div>
 <div style="clear:both;"></div>
 <div class="playlist-topping">
-  <h4 class='playlist-title'> <%="#{@playlist.intensity.downcase} intensity playlist"%></h4>
-  <%= link_to "Save Playlist", playlist_path(@playlist), method: :put, class: 'btn btn-default btn-lg save-playlist' if @playlist.user_id.nil? %>
+  <% if current_user.nil? && @playlist.name.nil? %>
+    <h4 class='playlist-title'> <%="#{@playlist.intensity.downcase} intensity playlist"%></h4>
+  <% elsif @playlist.name.nil? %>
+    <%= form_tag playlist_path(@playlist), method: :put, :class => "form-inline" do %>
+      <%= text_field_tag :name, params[:query], class: 'playlist-title form-title', placeholder: "Name Your Playlist" %>
+      <%= submit_tag "Save Playlist", name: nil, class: "btn btn-default btn-lg save-playlist" %>
+    <% end %>
+  <% else %>
+    <h4 class='playlist-title'> <%="#{@playlist.name}"%></h4>
+  <% end %>
 </div>
 <div style="clear:both;"></div>
 <% @playlist.tracks.each do |track| %>
