@@ -18,6 +18,7 @@ gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form', '~> 2.2.0'
 gem 'omniauth-spotify'
 gem 'figaro'
+gem 'faraday'
 
 group :development, :test do
   gem 'byebug'

@@ -9,7 +9,7 @@
 <div class="playlist-table">
   <div class="row">
     <div class="col-lg-2 song-album">
-      <%= link_to(image_tag('tswift-album.png', height: '90px', width: '90px'), playlist_path(playlist) ) %>
+      <%= link_to(image_tag(playlist.tracks.first.spotify_album_image, height: '90px', width: '90px'), playlist_path(playlist) ) %>
     </div>
     <div class="col-lg-2 playlist-songs">
       <p><%=link_to playlist.name, playlist_path(playlist) %></p>

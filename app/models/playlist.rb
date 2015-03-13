@@ -10,7 +10,7 @@ class Playlist < ActiveRecord::Base
   end
 
   def create_mix(sorted_tracks, time)
-    while playlist_length < (time.to_i * 60) do
+    while playlist_length < (time.to_i * 60 * 1000) do
       track = sorted_tracks.to_a.shuffle.pop
       tracks << track unless tracks.exists?(track)
     end
