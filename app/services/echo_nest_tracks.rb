@@ -19,7 +19,7 @@ class EchoNestTracks
     end
   rescue RateLimitExceededException
     puts "Rate limit was exceeded. Waiting..."
-    sleep 40
+    sleep 15
     retry
   end
 

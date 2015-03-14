@@ -31,6 +31,9 @@
  }
 
  /* full site */
+.main-body{
+  min-height: 550px;
+}
 
 body {
   background: image-url("runner.jpg") no-repeat center center fixed;
@@ -401,8 +404,8 @@ a:visited{
 
 /* footer */
 .footer {
+  margin-top: 50px;
   text-align: center;
-  position: fixed;
   bottom:0;
   width:100%;
   height:40px;

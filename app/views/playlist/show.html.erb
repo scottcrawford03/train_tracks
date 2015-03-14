@@ -21,11 +21,11 @@
 <div class="playlist-table">
   <div class="row">
     <div class="col-lg-2 song-album">
-      <%= image_tag(track.album_display_image, height: '77px', width: '77px') %>
+      <%= link_to(image_tag(track.album_display_image, height: '77px', width: '77px'), track.spotify_album_url, :target => "_blank") %>
     </div>
     <div class="col-lg-2 playlist-songs">
-      <p><%= track.spotify_artist_name %></p>
-      <p><span class="playlist-song-title"> <%= track.spotify_track_name %></span></p>
+      <p><%= link_to(track.spotify_artist_name, track.spotify_artist_url, :target => "_blank") %></p>
+      <p><span class="playlist-song-title"> <%= link_to(track.spotify_track_name, track.spotify_track_url, :target => "_blank") %></span></p>
     </div>
     <div class="col-lg-1 playlist-bpm">
       <%= "#{track.avg_bpm} BPM"%>
