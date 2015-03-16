@@ -15,4 +15,8 @@ class Playlist < ActiveRecord::Base
       tracks << track unless tracks.exists?(track)
     end
   end
+
+  def get_track_ids
+    tracks.inject([]) {|arr, track| arr << track.spotify_track_id}.join(',').chop
+  end
 end

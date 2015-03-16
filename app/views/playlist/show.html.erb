@@ -4,6 +4,9 @@
   <%=link_to(image_tag("TrainTracksLogo2.png", height: "20%", width: "20%"), root_path) %>
 </div>
 <div style="clear:both;"></div>
+<div class="spotify_track_player">
+  <iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%= @playlist.get_track_ids %>" frameborder="0" allowtransparency="true"></iframe>
+</div>
 <div class="playlist-topping">
   <% if current_user.nil? && @playlist.name.nil? %>
     <h4 class='playlist-title'> <%="#{@playlist.intensity.downcase} intensity playlist"%></h4>
@@ -21,7 +24,7 @@
 <div class="playlist-table">
   <div class="row">
     <div class="col-lg-2 song-album">
-      <%= link_to(image_tag(track.album_display_image, height: '77px', width: '77px'), track.spotify_album_url, :target => "_blank") %>
+      <%= link_to(image_tag(track.album_display_image, height: '70%', width: '70%'), track.spotify_album_url, :target => "_blank") %>
     </div>
     <div class="col-lg-2 playlist-songs">
       <p><%= link_to(track.spotify_artist_name, track.spotify_artist_url, :target => "_blank") %></p>

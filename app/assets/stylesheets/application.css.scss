@@ -240,12 +240,19 @@ a:visited{
   outline: none;
 }
 
+.spotify_track_player {
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  margin-bottom: -100px;
+}
+
 /* playlist table */
 
 .playlist-title {
+  margin-top: 70px;
   float: left;
   margin-left: 165px;
-  margin-top: 70px;
   margin-bottom: 40px;
   font-size: 50px;
   font-family: 'emblema_headline2_deco';
