@@ -21,4 +21,17 @@ describe "the user", type: :feature do
     @user.provider = nil
     expect(@user).to_not be_valid
   end
+
+  it "has many playlists" do
+    expect(@user.playlists).to eq([])
+    playlist = Playlist.create(name: "Playlist",
+                                intensity: "HIGH",
+                                length: 1234      )
+    @user.playlists << playlist
+
+    expect(@user.playlists.first.name).to eq('Playlist')
+  end
+
+  xit "saves or finds by auth" do
+  end
 end

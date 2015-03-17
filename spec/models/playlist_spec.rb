@@ -22,4 +22,30 @@ describe "the playlist", type: :feature do
     @playlist.length = nil
     expect(@playlist).to_not be_valid
   end
+
+  it "finds the length of it's playlist" do
+    track1 = Track.create(spotify_album_url: "spotify.com", spotify_track_id: "123ABC", length: 200, explicit: false)
+    track2 = Track.create(spotify_album_url: "spotify.com", spotify_track_id: "123ABC", length: 200, explicit: false)
+    track3 = Track.create(spotify_album_url: "spotify.com", spotify_track_id: "123ABC", length: 200, explicit: false)
+
+    @playlist.tracks << track1
+    @playlist.tracks << track2
+    @playlist.tracks << track3
+
+    expect(@playlist.playlist_length).to eq(600)
+  end
+
+  it "gets the playlist track ids" do
+    track1 = Track.create(spotify_album_url: "spotify.com", spotify_track_id: "123ABC", length: 200, explicit: false)
+    track2 = Track.create(spotify_album_url: "spotify.com", spotify_track_id: "123ABC", length: 200, explicit: false)
+    track3 = Track.create(spotify_album_url: "spotify.com", spotify_track_id: "123ABC", length: 200, explicit: false)
+
+    @playlist.tracks << track1
+    @playlist.tracks << track2
+    @playlist.tracks << track3
+
+    expect(@playlist.get_track_ids).to eq ("123ABC,123ABC,123ABC")
+  end
+
+
 end

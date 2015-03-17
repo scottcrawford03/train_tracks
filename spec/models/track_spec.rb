@@ -33,4 +33,41 @@ describe "the playlist", type: :feature do
     expect(@track.length).to eq(200)
     expect(@track.explicit).to eq(false)
   end
+
+  it "Grabs High Intensity Songs" do
+    track1 = Track.create(spotify_track_name: "Shake It Off", avg_bpm:180)
+    track3 = Track.create(spotify_track_name: "YOLO", avg_bpm:1)
+
+    sorted_tracks = Track.track_intensity('HIGH')
+    expect(sorted_tracks.first.avg_bpm).to eq(track1.avg_bpm)
+  end
+
+  it "only grabs songs in Medium" do
+    sorted_tracks = Track.track_intensity('MEDIUM')
+    expect(sorted_tracks.first.avg_bpm).to eq(@track.avg_bpm)
+  end
+
+  it "only grabs songs in LOW" do
+    track3 = Track.create(spotify_track_name: "YOLO", avg_bpm:1)
+    track1 = Track.create(spotify_track_name: "Shake It Off", avg_bpm:180)
+
+    sorted_tracks = Track.track_intensity('LOW')
+    expect(sorted_tracks.first.avg_bpm).to eq(track3.avg_bpm)
+  end
+
+  it "has a default album image" do
+    @track.spotify_album_image = nil
+
+    expect(@track.album_display_image).to eq("TTlogo.png")
+  end
+
+  it "returns spotify album image if present" do
+    expect(@track.album_display_image).to eq("image")
+  end
+
+  it "finds ranges based on intensity" do
+    expect(Track::INTENSITY_RANGES['LOW']).to eq(1..100)
+    expect(Track::INTENSITY_RANGES['MEDIUM']).to eq(101..130)
+    expect(Track::INTENSITY_RANGES['HIGH']).to eq(131..200)
+  end
 end

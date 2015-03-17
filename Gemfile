@@ -35,3 +35,7 @@ group :development, :test do
   gem 'mocha'
   gem 'launchy'
 end
+
+group :test do
+  gem 'simplecov'
+end
