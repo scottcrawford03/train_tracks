@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe "the playlist", type: :feature do
   before do
+    puts "before do"
     @playlist = Playlist.create(name: "Playlist",
                                 intensity: "HIGH",
                                 length: 1234)
@@ -46,6 +47,19 @@ describe "the playlist", type: :feature do
 
     expect(@playlist.get_track_ids).to eq ("123ABC,123ABC,123ABC")
   end
+
+  it "creates a mix" do
+    track1 = Track.create(spotify_album_url: "spotify.com", spotify_track_id: "123ABC", length: 20000, explicit: false)
+    track2 = Track.create(spotify_album_url: "spotify.com", spotify_track_id: "123AB3", length: 20000, explicit: false)
+    track3 = Track.create(spotify_album_url: "spotify.com", spotify_track_id: "123AadC", length: 20000, explicit: false)
+
+    sorted_tracks = [track1, track2, track3 ]
+    @playlist.create_mix(sorted_tracks, '1')
+
+    expect(@playlist.tracks.size).to eq(3)
+    expect(@playlist.tracks.first.spotify_album_url).to eq('spotify.com') 
+  end
+
 
 
 end

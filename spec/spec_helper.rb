@@ -1,11 +1,6 @@
 require "capybara/rspec"
 require "rails_helper"
 
-require 'simplecov'
-SimpleCov.start do
-  add_filter '/spec/'
-  add_filter '/config/'
-end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

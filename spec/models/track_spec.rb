@@ -1,4 +1,4 @@
-describe "the playlist", type: :feature do
+describe "the track", type: :feature do
   before do
     @track = Track.create(spotify_album_url: "spotify.com",
                           spotify_album_image: "image",

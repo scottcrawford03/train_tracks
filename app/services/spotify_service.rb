@@ -7,10 +7,6 @@ class SpotifyService
     @connection.headers = { 'Authorization' => header_key }
   end
 
-  def tracks(ids)
-    parse(connection.get("/v1/tracks?ids=#{ids}"))
-  end
-
   def top_playlists
     parse(connection.get("/v1/browse/featured-playlists"))
   end
