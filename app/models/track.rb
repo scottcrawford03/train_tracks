@@ -30,7 +30,6 @@ class Track < ActiveRecord::Base
           end
        end
      end
-
   end
 
   def album_display_image
