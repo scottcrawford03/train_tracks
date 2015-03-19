@@ -18,7 +18,7 @@ gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form', '~> 2.2.0'
 gem 'omniauth-spotify'
 gem 'figaro'
-gem 'faraday'
+gem 'faraday', '< 0.9.0'
 gem 'taps'
 
 group :development, :test do
@@ -34,6 +34,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'mocha'
   gem 'launchy'
+  gem 'vcr'
 end
 
 group :test do

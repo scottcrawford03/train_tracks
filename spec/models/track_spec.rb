@@ -70,4 +70,32 @@ describe "the track", type: :feature do
     expect(Track::INTENSITY_RANGES['MEDIUM']).to eq(101..130)
     expect(Track::INTENSITY_RANGES['HIGH']).to eq(131..200)
   end
+
+  it "saves the tracks to a track item" do
+   tracks = [{'items' =>
+            [{ 'track' => {
+                'album' => {
+                  'images' => [
+                    {'url' => 'hello.com'} ],
+                  'name' => 'Seven Nation Army',
+                  'external_urls' => { 'spotify' => 'hello.com'} },
+                'artists' => [{
+                  'name' => 'Zella Day',
+                  'external_urls' => {
+                    'spotify' => 'hello.com' } }],
+                'name' => 'Shake it Off',
+                'id' => 1,
+                'duration_ms' => 400,
+                'explicit' => false,
+                'external_urls' => { 'spotify' => 'hello.io'}
+              }  } ]}]
+
+    Track.save_tracks_from_spotify(tracks)
+    track = Track.find_by(spotify_artist_name: 'Zella Day')
+
+    expect(track.length).to eq(400)
+    expect(track.explicit).to eq(false)
+    expect(track.spotify_track_url).to eq('hello.io') 
+  end
+
 end

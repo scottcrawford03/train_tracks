@@ -2,7 +2,6 @@ require 'simplecov'
 SimpleCov.start do
   add_filter '/spec/'
   add_filter '/config/'
-  add_filter '/app/services/'
 end
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
@@ -54,4 +53,9 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+end
+
+VCR.configure do |config|
+  config.cassette_library_dir = 'spec/vcr_cassettes'
+  config.hook_into :faraday
 end

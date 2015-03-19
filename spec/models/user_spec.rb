@@ -32,6 +32,24 @@ describe "the user", type: :feature do
     expect(@user.playlists.first.name).to eq('Playlist')
   end
 
-  xit "saves or finds by auth" do
+  it "saves or finds by auth" do
+    auth = OmniAuth.config.mock_auth[:spotify] = OmniAuth::AuthHash.new({
+              :provider => 'spotify',
+              :uid => '123545',
+              :info => {
+                :name => "Scott Crawford",
+                :image => "hello.com",
+              },
+              :credentials => {
+                :token => "token",
+                :refresh_token => "refresh_token"
+              }
+            })
+
+    user = User.find_or_create_from_auth(auth)
+
+    expect(user.provider).to eq ('spotify')
+    expect(user.uid).to eq ('123545')
+    expect(user.name).to eq ('Scott Crawford')
   end
 end
