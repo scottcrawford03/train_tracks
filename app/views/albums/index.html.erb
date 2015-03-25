@@ -1,0 +1,7 @@
+<div class="album-art">
+  <% @images_and_urls.each do |image, url| %>
+    <div class="album-cover">
+      <%= link_to image_tag(image, height: '100%', width: '100%'), url, :target => "_blank" %>
+    </div>
+  <% end %>
+</div>

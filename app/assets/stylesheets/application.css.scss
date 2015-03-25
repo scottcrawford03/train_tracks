@@ -409,6 +409,19 @@ a:visited{
   width: 150px;
 }
 
+/* album art page */
+.album-art{
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.album-cover {
+  display: inline-block;
+  width: 5%;
+  height: 5%;
+}
+
 /* footer */
 .footer {
   margin-top: 50px;
