@@ -3,8 +3,8 @@ class Track < ActiveRecord::Base
 
   validates :spotify_track_id, uniqueness: true
 
-  INTENSITY_RANGES = {"LOW" => (1..100),
-                      "MEDIUM" => (101..130),
+  INTENSITY_RANGES = {"LOW" => (1..80),
+                      "MEDIUM" => (81..130),
                       "HIGH" => (131..200) }
 
   def self.track_intensity(intensity)
