@@ -38,6 +38,14 @@ class PlaylistController < ApplicationController
     end
   end
 
+  def spotify
+    playlist = Playlist.find(params['id'])
+    SpotifyTracks.create_playlist(current_user.token, current_user.uid, playlist)
+    playlist.update(saved_to_spotify: true)
+    flash[:success] = "Playlist Saved to Spotify. Get to Jammin'"
+    redirect_to playlist
+  end
+
   private
 
   def update_playlist

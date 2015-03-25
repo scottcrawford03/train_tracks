@@ -37,6 +37,9 @@ RSpec.describe SpotifyTracks, type: :model do
         end
       end
 
+      it "creates a playlist for the user" do
+      end
+
     end
   end
 end

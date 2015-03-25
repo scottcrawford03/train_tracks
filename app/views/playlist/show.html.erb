@@ -17,6 +17,7 @@
     <% end %>
   <% else %>
     <h4 class='playlist-title'> <%="#{@playlist.name}"%></h4>
+    <%= button_to "Save Playlist to Spotify", spotify_playlist_path(@playlist), class: "btn btn-default btn-lg save-playlist" unless @playlist.saved_to_spotify? %>
   <% end %>
 </div>
 <div style="clear:both;"></div>
