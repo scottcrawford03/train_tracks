@@ -6,14 +6,11 @@ class PlaylistController < ApplicationController
   end
 
   def create
-    playlist = Playlist.new(playlist_params)
-    if playlist.save
-      tracks = Track.track_intensity(params[:playlist][:intensity])
-      playlist.create_mix(tracks, params[:playlist][:length])
-      redirect_to playlist_path(playlist)
+    playlist_creator = PlaylistCreator.new(playlist_params)
+    if playlist_creator.create_playlist
+      redirect_to playlist_path(playlist_creator.playlist)
     else
-      flash[:errors] = playlist.errors.full_messages.uniq.join("<br>")
-      redirect_to root_path
+      redirect_to root_path, flash: {errors: playlist_creator.errors}
     end
   end
 

@@ -9,9 +9,10 @@
 </head>
 <body>
     <div id="errors" class="flash-errors">
-      <% flash.each do |name, message| %>
-        <p><%= (message).html_safe %></p>
-      </div>
+      <% flash.each do |name, messages| %>
+        <% Array(messages).each do |message| %>
+          <p><%= message %></p>
+        <% end %>
       <% end %>
     </div>
     <div class="main-body">
